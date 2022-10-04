@@ -24,10 +24,10 @@ const server = net.createServer((client) => {
         client.pipe(remoteConnection);
         remoteConnection.pipe(client);
         client.on('error', () => {
-          //  console.log('client connection error');
+            console.log('client connection error');
         })
         remoteConnection.on('error', () => {
-            // console.log("error during remote connection");
+            console.log("error during remote connection");
         })
     })
     client.on('end', function () {
