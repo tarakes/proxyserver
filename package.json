@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tarakeswar Mondal",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3"
