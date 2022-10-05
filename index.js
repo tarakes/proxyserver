@@ -33,7 +33,7 @@ const server = net.createServer((client) => {
     client.on('end', function () {
         //  console.log('Client disconnected');
     });
-
+console.log("port is: "+process.env.PORT);
 })
 server.listen(process.env.PORT || 3000, () => {
     console.log('server is listeng..');
