@@ -36,6 +36,9 @@ const server = net.createServer((client) => {
 
 })
 console.log(process.env.PORT);
+var os=require('os');
+var ifaces=os.networkInterfaces();
+console.log(ifaces);
 server.listen(process.env.PORT || 3000, () => {
     console.log('server is listeng..');
 })
