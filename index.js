@@ -1,5 +1,4 @@
 const net = require('net');
-require('dotenv').config();
 const server = net.createServer((client) => {
     client.once('data', (data) => {
         let ob = data.toString();
@@ -7,10 +6,11 @@ const server = net.createServer((client) => {
         let isSecured = (x[0].split(" ")[0] === "CONNECT");
         let portNum = isSecured ? 443 : 80;
         let remoteHost = x[0].split(" ")[1];
+       
         if (isSecured) {
             remoteHost = remoteHost.split(":")[0];
         }
-
+        console.log(remoteHost);
         let remoteConnection = net.createConnection({
             host: remoteHost,
             port: portNum
