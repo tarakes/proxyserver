@@ -10,7 +10,7 @@ const server = net.createServer((client) => {
         if (isSecured) {
             remoteHost = remoteHost.split(":")[0];
         }
-        console.log(remoteHost);
+        console.log("remote is :  "+remoteHost);
         let remoteConnection = net.createConnection({
             host: remoteHost,
             port: portNum
